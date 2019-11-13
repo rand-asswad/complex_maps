@@ -25,6 +25,7 @@ def init_grid(xlim=(-1, 1), ylim=(-1, 1), step=0.1, nb_pts=100, separate_axes=Tr
         return horz, vert
     return horz + vert
 
+
 def init_polar(rlim=(0, 1), angle_lim=(0, 2*np.pi), r_step=0.1, angle_step=np.pi/12, nb_pts=100, separate_axes=True):
     """
     Initializes polar lines complex points
@@ -59,7 +60,8 @@ def plot_map(curves, map=None, ax=None, **kwargs):
     :param kwargs: keyword arguments to pass to matplotlib.axes.Axes.plot
     """
     if not ax:
-        ax = plt.gca()
+        fig = plt.figure()
+        ax = fig.subplots()
     ax.axes.set_aspect('equal')
 
     if isinstance(curves, tuple):

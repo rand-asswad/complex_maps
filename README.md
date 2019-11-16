@@ -12,3 +12,8 @@ This repo holds resources for my presentation about conformal mappings in my Mas
 - `ticks.py`: a script from SO for custom matplotlib ticks
 - `requirements.txt`: `venv` requirements (I use it locally)
 - `environment.yml`: conda environment, overrides `requirements.txt` in [mybinder.org](https://mybinder.org/)
+
+## To-Do
+
+- Bibliography
+- Create R Markdown version of notebook

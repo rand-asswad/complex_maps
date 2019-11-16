@@ -8,6 +8,8 @@ rcParams['text.usetex'] = True
 rcParams['font.family'] = 'sans-serif'
 rcParams['font.sans-serif'] = ['Helvetica']
 
+from ticks import set_ticks
+
 
 def init_grid(xlim=(-1, 1), ylim=(-1, 1), step=0.1, nb_pts=1000, separate_axes=True):
     """
@@ -66,7 +68,9 @@ def plot_map(curves, map, plot_domain=True, align='horizontal', **kwargs):
     """
     Plots complex map image along given curves
     :param curves: list of curves or tuple of lists
-    :param map: complex function (default: identity map)
+    :param map: complex function (plots identity mapping if `None`)
+    :param plot_domain: boolean to plot domain or only image (default: True)
+    :param align: if plot_domain is true, align axes 'horizontal' or 'vertical' (default: horizontal)
     :param kwargs: keyword arguments to pass to matplotlib.axes.Axes.plot
     """
     fig = plt.figure()

@@ -8,3 +8,5 @@ dependencies:
   - ipywidgets
   - numpy
   - matplotlib
+  - scipy
+  - mpmath
